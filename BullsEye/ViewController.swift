@@ -26,11 +26,5 @@ class ViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    @IBAction func knockKnock() {
-        let alert = UIAlertController(title: "Knock Knock!", message: "Who's There ? :D", preferredStyle: .actionSheet)
-        let knock = UIAlertAction(title: "Done", style: .default, handler: nil)
-        alert.addAction(knock)
-        present(alert, animated: true, completion: nil)
-    }
 }
 
