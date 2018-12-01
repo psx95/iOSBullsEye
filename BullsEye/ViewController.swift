@@ -14,7 +14,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-
+    
+    @IBAction // connect to something inside the storyboard
+    func showAlert() {
+        print ("Hello!")
+    }
 }
 
