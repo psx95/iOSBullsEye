@@ -17,7 +17,13 @@ class ViewController: UIViewController {
     
     @IBAction // connect to something inside the storyboard
     func showAlert() {
-        print ("Hello!")
+        let alert = UIAlertController(title: "Hello World", message: "This is not my first app", preferredStyle: .alert);
+        // UIAlretAction - the button that appears inside the alert
+        let action = UIAlertAction(title: "Awesome", style: .default, handler: nil)
+        // tell the alert to add the button to itself
+        alert.addAction(action)
+        // present the alert on the screen 
+        present(alert, animated: true, completion: nil)
     }
 }
 
