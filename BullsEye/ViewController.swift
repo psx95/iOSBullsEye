@@ -22,7 +22,14 @@ class ViewController: UIViewController {
         let action = UIAlertAction(title: "Awesome", style: .default, handler: nil)
         // tell the alert to add the button to itself
         alert.addAction(action)
-        // present the alert on the screen 
+        // present the alert on the screen
+        present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func knockKnock() {
+        let alert = UIAlertController(title: "Knock Knock!", message: "Who's There ? :D", preferredStyle: .actionSheet)
+        let knock = UIAlertAction(title: "Done", style: .default, handler: nil)
+        alert.addAction(knock)
         present(alert, animated: true, completion: nil)
     }
 }
