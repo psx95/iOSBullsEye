@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         let roundedValue = slider.value.rounded()
         currentValue = Int(roundedValue)
         targetValue = Int.random(in: 1...100)
-        startNewRound()
+        startNewGame()
     }
     
     @IBAction // connect to something inside the storyboard
@@ -37,10 +37,10 @@ class ViewController: UIViewController {
         
         let title: String
         if difference == 0 {
-            title = "Perfect!" + "\nYou get 100 bonus Points!!"
+            title = "Perfect!" + "\nYou get 100 bonus points!!"
             score += 100
         } else if difference == 1 {
-            title = "Just 1 off!!" + "\nYou get 50 bonus Points!!"
+            title = "Just 1 off!!" + "\nYou get 50 bonus points!!"
             score += 50
         } else if difference < 5 {
             title = "You almost had it !"
@@ -53,12 +53,14 @@ class ViewController: UIViewController {
         "\nYour Total Score till now is \(score)"
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert);
         // UIAlretAction - the button that appears inside the alert
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let action = UIAlertAction(title: "OK", style: .default, handler: {
+            // this is called a closure in iOS (a method without a name, kind of like promise in JS)
+            action in self.startNewRound()
+        })
         // tell the alert to add the button to itself
         alert.addAction(action)
         // present the alert on the screen
         present(alert, animated: true, completion: nil)
-        startNewRound()
     }
 
     @IBAction func sliderMoved(_ slider: UISlider) {
@@ -80,5 +82,12 @@ class ViewController: UIViewController {
         targetDisplay.text = "\(targetValue)"
         roundDisplay.text = String(rounds) // another way of using Strings
     }
+    
+    @IBAction func startNewGame () {
+        score = 0
+        rounds = 0
+        startNewRound()
+    }
+    
 }
 
