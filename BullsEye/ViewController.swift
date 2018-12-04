@@ -27,6 +27,26 @@ class ViewController: UIViewController {
         currentValue = Int(roundedValue)
         targetValue = Int.random(in: 1...100)
         startNewGame()
+        // Customizing the slider
+        //let thumbImageNormal = UIImage(named: "SliderThumb-Normal")! // name of the image you want to load in the variable
+        let thumbImageNormal = #imageLiteral(resourceName: "SliderThumb-Normal")
+        slider.setThumbImage(thumbImageNormal, for: .normal)
+        
+        let thumbImagehighlighted = #imageLiteral(resourceName: "SliderThumb-Highlighted")
+        slider.setThumbImage(thumbImagehighlighted, for: .highlighted)
+        
+        // these insets determine what parts of the image are ok to stretch -
+        // left - 14 means that we dont want the 14 most points to stretch
+        // top - 0 we dont minf if it streteches the top or bottom
+        let insets = UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
+        
+        let trackLeftImage = #imageLiteral(resourceName: "SliderTrackLeft")
+        let trackLeftResizable = trackLeftImage.resizableImage(withCapInsets: insets)
+        slider.setMinimumTrackImage(trackLeftResizable, for: .normal)
+        
+        let trackRightImage = #imageLiteral(resourceName: "SliderTrackRight")
+        let trackRightResizable = trackRightImage.resizableImage(withCapInsets: insets)
+        slider.setMaximumTrackImage(trackRightResizable, for: .normal)
     }
     
     @IBAction // connect to something inside the storyboard
