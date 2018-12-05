@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="landscape">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,14 +14,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BullsEye" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="rMF-Oz-A9c">
-                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oxl-u9-M2C">
-                                <rect key="frame" x="99" y="69.666666666666686" width="538" height="275"/>
+                                <rect key="frame" x="64.5" y="50" width="538" height="275"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Put the Bull's Eye as Close as you can to:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="881-tY-Vyh">
                                         <rect key="frame" x="102" y="20" width="335" height="21"/>
@@ -169,16 +169,18 @@
             <objects>
                 <viewController id="6No-Qn-Vwo" customClass="AboutViewController" customModule="BullsEye" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hef-7c-uzA">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Mnx-09-wCK">
-                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Mnx-09-wCK">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BB6-vK-hIu">
-                                <rect key="frame" x="234" y="254" width="100" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BB6-vK-hIu">
+                                <rect key="frame" x="283.5" y="318" width="100" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="MV2-VW-lyw"/>
+                                    <constraint firstAttribute="width" constant="100" id="w1j-sV-Oat"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 <size key="titleShadowOffset" width="0.0" height="1"/>
@@ -190,9 +192,26 @@
                                     <action selector="close" destination="6No-Qn-Vwo" eventType="touchUpInside" id="TUa-DT-S11"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IiF-ql-F8p">
-                                <rect key="frame" x="372" y="253" width="186" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gI8-3J-pL1">
+                                <rect key="frame" x="20" y="20" width="627" height="290"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="329" id="AEt-TU-zaa"/>
+                                    <constraint firstAttribute="width" constant="696" id="TKA-cU-maD"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="290" id="UqN-2i-xVs"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="627" id="okM-F6-M6b"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IiF-ql-F8p">
+                                <rect key="frame" x="461" y="318" width="186" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="bB0-l0-wtC"/>
+                                    <constraint firstAttribute="width" constant="186" id="xcd-T3-kan"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 <size key="titleShadowOffset" width="0.0" height="1"/>
@@ -204,17 +223,22 @@
                                     <segue destination="vgi-Cx-n33" kind="presentation" modalTransitionStyle="coverVertical" id="elg-lx-jJq"/>
                                 </connections>
                             </button>
-                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gI8-3J-pL1">
-                                <rect key="frame" x="20" y="20" width="528" height="213"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gI8-3J-pL1" firstAttribute="leading" secondItem="kuh-25-q6N" secondAttribute="leading" constant="20" id="02y-LE-6Jb"/>
+                            <constraint firstItem="Mnx-09-wCK" firstAttribute="leading" secondItem="kuh-25-q6N" secondAttribute="leading" id="8bP-zL-sCd"/>
+                            <constraint firstItem="kuh-25-q6N" firstAttribute="bottom" secondItem="BB6-vK-hIu" secondAttribute="bottom" constant="20" id="AAb-6A-XUw"/>
+                            <constraint firstItem="BB6-vK-hIu" firstAttribute="top" secondItem="gI8-3J-pL1" secondAttribute="bottom" constant="8" id="CEE-Tn-qQB"/>
+                            <constraint firstItem="kuh-25-q6N" firstAttribute="bottom" secondItem="Mnx-09-wCK" secondAttribute="bottom" id="MII-k3-8ID"/>
+                            <constraint firstItem="gI8-3J-pL1" firstAttribute="top" secondItem="kuh-25-q6N" secondAttribute="top" constant="20" id="MXl-TF-aGX"/>
+                            <constraint firstItem="Mnx-09-wCK" firstAttribute="top" secondItem="kuh-25-q6N" secondAttribute="top" id="PtR-tQ-8Xx"/>
+                            <constraint firstItem="kuh-25-q6N" firstAttribute="trailing" secondItem="IiF-ql-F8p" secondAttribute="trailing" constant="20" id="QRJ-fQ-6Ce"/>
+                            <constraint firstItem="kuh-25-q6N" firstAttribute="bottom" secondItem="IiF-ql-F8p" secondAttribute="bottom" constant="20" id="TU5-cm-GBK"/>
+                            <constraint firstItem="BB6-vK-hIu" firstAttribute="centerX" secondItem="hef-7c-uzA" secondAttribute="centerX" id="dPs-Et-n8F"/>
+                            <constraint firstItem="kuh-25-q6N" firstAttribute="trailing" secondItem="Mnx-09-wCK" secondAttribute="trailing" id="q9C-B3-n12"/>
+                            <constraint firstItem="kuh-25-q6N" firstAttribute="trailing" secondItem="gI8-3J-pL1" secondAttribute="trailing" constant="20" id="vQc-i5-39a"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kuh-25-q6N"/>
                     </view>
                     <connections>
@@ -230,7 +254,7 @@
             <objects>
                 <viewController id="vgi-Cx-n33" customClass="AboutAuthorViewController" customModule="BullsEye" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vbj-tX-iIv">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="maxresdefault" translatesAutoresizingMaskIntoConstraints="NO" id="t40-fl-cJi">
